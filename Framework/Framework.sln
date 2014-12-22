@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Framework", "Framework\Framework.vcxproj", "{C3757126-9272-4C5D-A910-457A6A987816}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcxproj", "{8AD8C2BB-C710-4797-8823-847D52EB70E9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C3757126-9272-4C5D-A910-457A6A987816} = {C3757126-9272-4C5D-A910-457A6A987816}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4C38D9F6-0FCD-4F2B-B3E5-31B11FD9EED8}"
+	ProjectSection(SolutionItems) = preProject
+		shaders\3DPlane.frag = shaders\3DPlane.frag
+		shaders\3DPlane.vert = shaders\3DPlane.vert
+		shaders\BitmapFont.frag = shaders\BitmapFont.frag
+		shaders\BitmapFont.vert = shaders\BitmapFont.vert
+		shaders\CompShader.frag = shaders\CompShader.frag
+		shaders\CompShader.vert = shaders\CompShader.vert
+		shaders\LightPass.frag = shaders\LightPass.frag
+		shaders\LightPass.vert = shaders\LightPass.vert
+		shaders\lines.frag = shaders\lines.frag
+		shaders\lines.vert = shaders\lines.vert
+		shaders\marchingCubes.frag = shaders\marchingCubes.frag
+		shaders\marchingCubes.geom = shaders\marchingCubes.geom
+		shaders\marchingCubes.vert = shaders\marchingCubes.vert
+		shaders\Model.frag = shaders\Model.frag
+		shaders\Model.vert = shaders\Model.vert
+		shaders\ShadowMap.frag = shaders\ShadowMap.frag
+		shaders\ShadowMap.vert = shaders\ShadowMap.vert
+		shaders\simple.frag = shaders\simple.frag
+		shaders\simple.vert = shaders\simple.vert
+		shaders\Terrain.cont = shaders\Terrain.cont
+		shaders\Terrain.eval = shaders\Terrain.eval
+		shaders\Terrain.frag = shaders\Terrain.frag
+		shaders\Terrain.vert = shaders\Terrain.vert
+		shaders\TerrainGen.frag = shaders\TerrainGen.frag
+		shaders\TerrainGen.vert = shaders\TerrainGen.vert
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Test|Win32 = Debug Test|Win32
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3757126-9272-4C5D-A910-457A6A987816}.Debug Test|Win32.ActiveCfg = Debug|Win32
+		{C3757126-9272-4C5D-A910-457A6A987816}.Debug Test|Win32.Build.0 = Debug|Win32
+		{C3757126-9272-4C5D-A910-457A6A987816}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C3757126-9272-4C5D-A910-457A6A987816}.Debug|Win32.Build.0 = Debug|Win32
+		{C3757126-9272-4C5D-A910-457A6A987816}.Release|Win32.ActiveCfg = Release|Win32
+		{C3757126-9272-4C5D-A910-457A6A987816}.Release|Win32.Build.0 = Release|Win32
+		{8AD8C2BB-C710-4797-8823-847D52EB70E9}.Debug Test|Win32.ActiveCfg = Debug|Win32
+		{8AD8C2BB-C710-4797-8823-847D52EB70E9}.Debug Test|Win32.Build.0 = Debug|Win32
+		{8AD8C2BB-C710-4797-8823-847D52EB70E9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8AD8C2BB-C710-4797-8823-847D52EB70E9}.Debug|Win32.Build.0 = Debug|Win32
+		{8AD8C2BB-C710-4797-8823-847D52EB70E9}.Release|Win32.ActiveCfg = Release|Win32
+		{8AD8C2BB-C710-4797-8823-847D52EB70E9}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

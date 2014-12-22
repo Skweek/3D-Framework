@@ -1,0 +1,5 @@
+dirt - http://www.samuriah.com/images/LargeDirtA_Thumb.jpg
+sand - http://fc03.deviantart.net/fs71/i/2010/291/3/4/seamless_desert_sand_texture_by_hhh316-d311qn7.jpg
+snow - http://www.mb3d.co.uk/mb3d/Grass_and_Snow_Ground_Seamless_and_Tileable_High_Res_Textures_files/snow_dirty_ground_1.jpg
+grass - http://sandbox.yoyogames.com/extras/image/name/san2/229/467229/original/grass.jpeg
+water - http://bgfons.com/upload/water_texture2378.jpg

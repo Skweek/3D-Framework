@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugTest|Win32">
+      <Configuration>DebugTest</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseTest|Win32">
+      <Configuration>ReleaseTest</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C3757126-9272-4C5D-A910-457A6A987816}</ProjectGuid>
+    <RootNamespace>Framework</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseTest|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='DebugTest|Win32'">
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseTest|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\.\output\build\</OutDir>
+    <IntDir>.\output\obj\</IntDir>
+    <TargetName>$(ProjectName).Debug</TargetName>
+    <IncludePath>..\3rd party\TinyXML;..\3rd party\glew\include;..\3rd party\FBX SDK\include\;..\3rd party\glfw\include\;..\3rd party\glm;..\3rd party\soil\src;.\source\inc;$(IncludePath)</IncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <TargetExt>.lib</TargetExt>
+    <LibraryPath>..\3rd party\FBX SDK\lib\vs2012\x86\debug;..\3rd party\glew\lib\Release\Win32;..\3rd party\glfw\lib-msvc110;..\3rd party\soil\lib\vs2012;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\.\output\$(Configuration)\build\</OutDir>
+    <IntDir>.\output\$(Configuration)\obj\</IntDir>
+    <IncludePath>..\3rd party\TinyXML;..\3rd party\glew\include;..\3rd party\glfw\include\;..\3rd party\FBX SDK\include\;..\3rd party\glm;..\3rd party\soil\src;.\source\inc;$(IncludePath)</IncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <TargetExt>.lib</TargetExt>
+    <LibraryPath>..\3rd party\glew\lib\Release\Win32;..\3rd party\glfw\lib-msvc110;..\3rd party\FBX SDK\lib\vs2012\x86\release;..\3rd party\soil\lib\vs2012;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseTest|Win32'">
+    <OutDir>..\.\output\$(Configuration)\build\</OutDir>
+    <IntDir>.\output\$(Configuration)\obj\</IntDir>
+    <IncludePath>.\3rd party\glew\include;.\3rd party\glfw\include\;.\3rd party\glm;.\3rd party\soil\src;.\source\inc;$(IncludePath)</IncludePath>
+    <ReferencePath>.\3rd party\glew\lib\Release\Win32;.\3rd party\glfw\lib-msvc110;.\3rd party\soil\lib\vs2012;$(ReferencePath)</ReferencePath>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugTest|Win32'">
+    <IncludePath>..\3rd party\glm;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG_;GLM_SWIZZLE;GLM_FORCE_RADIANS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>libfbxsdk-md.lib;glfw3.lib;glew32s.lib;SOIL.lib;OpenGL32.lib;</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLM_SWIZZLE;GLM_FORCE_RADIANS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>libfbxsdk-md.lib;glfw3.lib;glew32s.lib;SOIL.lib;OpenGL32.lib;</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseTest|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>GLM_SWIZZLE;GLM_FORCE_RADIANS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\3rd party\TinyXML\tinyxml2.h" />
+    <ClInclude Include="source\inc\Application.h" />
+    <ClInclude Include="source\inc\BitmapFont.h" />
+    <ClInclude Include="source\inc\Camera.h" />
+    <ClInclude Include="source\inc\ChatBox.h" />
+    <ClInclude Include="source\inc\FBXLoader.h" />
+    <ClInclude Include="source\inc\NavMesh.h" />
+    <ClInclude Include="source\inc\NoiseMap.h" />
+    <ClInclude Include="source\inc\LightPass.h" />
+    <ClInclude Include="source\inc\MarchingCube.h" />
+    <ClInclude Include="source\inc\RenderableObject.h" />
+    <ClInclude Include="source\inc\Renderable\3DPlane.h" />
+    <ClInclude Include="source\inc\Renderable\Text.h" />
+    <ClInclude Include="source\inc\Renderable\Lines.h" />
+    <ClInclude Include="source\inc\Renderable\Model.h" />
+    <ClInclude Include="source\inc\Renderable\Quad.h" />
+    <ClInclude Include="source\inc\Renderable\Volume.h" />
+    <ClInclude Include="source\inc\ResourceManager.h" />
+    <ClInclude Include="source\inc\Scene.h" />
+    <ClInclude Include="source\inc\ShaderManager.h" />
+    <ClInclude Include="source\inc\ShadowMap.h" />
+    <ClInclude Include="source\inc\TerrainGeneration.h" />
+    <ClInclude Include="source\inc\UI\UIBase.h" />
+    <ClInclude Include="source\inc\UI\UIButton.h" />
+    <ClInclude Include="source\inc\UI\UISlider.h" />
+    <ClInclude Include="source\inc\Utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\3rd party\TinyXML\tinyxml2.cpp" />
+    <ClCompile Include="source\src\Application.cpp" />
+    <ClCompile Include="source\src\BitmapFont.cpp" />
+    <ClCompile Include="source\src\Camera.cpp" />
+    <ClCompile Include="source\src\ChatBox.cpp" />
+    <ClCompile Include="source\src\FBXLoader.cpp" />
+    <ClCompile Include="source\src\NavMesh.cpp" />
+    <ClCompile Include="source\src\NoiseMap.cpp" />
+    <ClCompile Include="source\src\LightPass.cpp" />
+    <ClCompile Include="source\src\MarchingCube.cpp" />
+    <ClCompile Include="source\src\RenderableObject.cpp" />
+    <ClCompile Include="source\src\Renderable\3DPlane.cpp" />
+    <ClCompile Include="source\src\Renderable\Text.cpp" />
+    <ClCompile Include="source\src\Renderable\Lines.cpp" />
+    <ClCompile Include="source\src\Renderable\Model.cpp" />
+    <ClCompile Include="source\src\Renderable\Quad.cpp" />
+    <ClCompile Include="source\src\Renderable\Volume.cpp" />
+    <ClCompile Include="source\src\ResourceManager.cpp" />
+    <ClCompile Include="source\src\Scene.cpp" />
+    <ClCompile Include="source\src\ShaderManager.cpp" />
+    <ClCompile Include="source\src\ShadowMap.cpp" />
+    <ClCompile Include="source\src\TerrainGeneration.cpp" />
+    <ClCompile Include="source\src\UI\UIBase.cpp" />
+    <ClCompile Include="source\src\UI\UIButton.cpp" />
+    <ClCompile Include="source\src\UI\UISlider.cpp" />
+    <ClCompile Include="source\src\Utility.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
