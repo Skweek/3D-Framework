@@ -1,5 +1,6 @@
 #include "ShadowMap.h"
 #include "Renderable/Model.h"
+#include "ShaderManager.h"
 #include "ResourceManager.h"
 #include "Camera.h"
 #include "Scene.h"
@@ -14,7 +15,8 @@ Model::Model(const char* a_ccFilePath, unsigned int a_uiShader, bool a_bAnimated
 		printf("Failed to load file: %s \n", a_ccFilePath);
 	}
 
-	SetShader(a_uiShader);
+	SetShader(ShaderManager::Get()->GetShader("Model"));
+	a_uiShader;
 	m_bAnimated = a_bAnimated;
 	m_fScale = 1.f;
 

@@ -266,7 +266,8 @@ namespace detail
 		y(value_type(y)),
 		z(value_type(z)),
 		w(value_type(w))
-	{}
+
+		{}
 
 	//////////////////////////////////////
 	// Convertion vector constructors

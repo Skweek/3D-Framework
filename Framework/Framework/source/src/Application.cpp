@@ -136,14 +136,10 @@ bool Application::Create(const char* a_ccTitle, int a_iWidth, int a_iHeight, boo
 	Scene::Create(ShaderManager::Get()->GetShader("Comp"));
 
 	LightPass::Create(ShaderManager::Get()->GetShader("Light"));
-	//LightPass::Get()->AddDirectional(glm::vec3(1,-0.5,0), glm::vec3(1));
-	LightPass::Get()->AddDirectional(glm::vec3(0,-1,0), glm::vec3(1));
-	//LightPass::Get()->AddPoint(glm::vec3(5.7,32,-86), glm::vec3(1), 50);
-		
-	m_pChat = new ChatBox();
-	m_pChat->Initialise(glm::vec2(SCREENWIDTH - 500, SCREENHEIGHT - 200), glm::vec2(450,150));
-	m_pChat->AddText("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbccccccccccccccccccccccccccccccccccccccccccccdddddddddddddddddddddddddddddddddeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeefffffffffffffffffffffffffffffffff");
-	
+	//LightPass::Get()->AddDirectional(glm::vec3(1,-0.5,0), glm::vec3(0,0,1));
+	//LightPass::Get()->AddDirectional(glm::vec3(1,0,0), glm::vec3(1,0,0));
+	LightPass::Get()->AddDirectional(glm::vec3(-1,0,0), glm::vec3(1,1,1));
+	LightPass::Get()->AddPoint(glm::vec3(0), glm::vec3(1,0,0), 50);
 	
 
 	// Call the virtual Init function

@@ -80,7 +80,7 @@ void main()
 	vec3 diff = LightDiff.xyz * vCol.xyz * d * Att;
 	vec3 spec = vec3(s * Att);
 
-	finalColour = diff;// * shadowFactor;// + spec;
+	finalColour = diff;// * shadowFactor + spec;
 
-	Diffuse = vec4(finalColour, 1);
+	Diffuse = vec4(1,0,0, 1);
 }

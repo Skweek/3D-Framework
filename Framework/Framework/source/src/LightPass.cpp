@@ -216,6 +216,7 @@ unsigned int LightPass::Render(glm::ivec4 a_pTextures)
 
 	// Additive blending
 	glEnable(GL_BLEND);
+	glBlendEquation(GL_FUNC_ADD);
 	glBlendFunc(GL_ONE, GL_ONE);
 
 	// Declare uniforms

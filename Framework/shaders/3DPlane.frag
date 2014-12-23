@@ -13,6 +13,7 @@ out vec4 Position;
 void main()
 {
 	Diffuse = texture(textureMap, vUV);
+	if(Diffuse.a == 0) Diffuse = vec4(1,1,1,1);
 
 	Normal = vec4(normalize(Normals),1);
 	Position = vec4(vPos, 1);

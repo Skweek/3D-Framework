@@ -1,10 +1,12 @@
 #include "Renderable/3DPlane.h"
+#include "ShaderManager.h"
 #include <SOIL.h>
 #include "Scene.h"
 
 Plane3D::Plane3D(glm::vec3 a_pPos, glm::vec2 a_pSize, unsigned int a_uiShader, glm::vec4 a_pColour, unsigned int a_uiTexture)
 {
-	m_uiShaderProgram = a_uiShader;
+	m_uiShaderProgram = ShaderManager::Get()->GetShader("3DPlane");
+	a_uiShader;
 	m_pPos = a_pPos;
 	m_pColour = a_pColour;
 	m_pSize = a_pSize;

@@ -18,5 +18,5 @@ void main()
 	vec4 text = texture(diffuse, UV);
 	vec4 lightText = texture(light, UV);
 	
-	out_Colour = text;// * lightText;
+	out_Colour = text * lightText;
 }

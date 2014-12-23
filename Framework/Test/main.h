@@ -2,7 +2,8 @@
 #include <glm/glm.hpp>
 
 // Forward declarations from library
-class Terrain;
+class Plane3D;
+class Model;
 
 class Game : public Application
 {
@@ -16,5 +17,6 @@ protected:
 	virtual void	Render();
 	virtual void	Destroy();
 
-	Terrain*		m_pTerrain;
+	Plane3D* m_testPlane;
+	Model* m_testModel;
 };

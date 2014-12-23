@@ -49,14 +49,14 @@ void main()
 
 	vec4 normal = (vec4(texture(NormalText, UV)) * 2) - 1.0;
 	vec4 LightDiff = texture(DiffuseText, UV);
-	vec3 Spec = texture(SpecText, UV).xyz;
+	vec4 Spec = texture(SpecText, UV);
 
-	vec3 finalColour;
+	vec4 finalColour;
 	
-	vec3 E = normalize(vPos.xyz - camera_pos.xyz);
-	vec3 N = normalize(normal.xyz);
-	vec3 L = ((LightPosition(vLightPos).xyz));
-	vec3 R = reflect(L, N);
+	vec4 E = normalize(vPos - camera_pos);
+	vec4 N = normalize(normal);
+	vec4 L = ((LightPosition(vLightPos)));
+	vec4 R = reflect(L, N);
 
 	float d = max(0, dot(N,-L));
 	float s = pow(max(0, dot(E,R)), 128);
@@ -75,12 +75,12 @@ void main()
 	}
 
 	// check to make sur ethe material colour exists
-	if(LightDiff == vec4(0)) LightDiff = vec4(1);
+	//if(LightDiff == vec4(0)) LightDiff = vec4(1);
 
-	vec3 diff = LightDiff.xyz * vCol.xyz * d * Att;
-	vec3 spec = vec3(s * Att);
+	vec4 diff = vCol * d * Att;
+	vec4 spec = vec4(s * Att);
 
-	finalColour = diff;// * shadowFactor;// + spec;
+	finalColour = diff + spec;// * shadowFactor;
 
-	Diffuse = vec4(finalColour, 1);
+	Diffuse = diff;
 }
